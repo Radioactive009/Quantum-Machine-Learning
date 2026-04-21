@@ -29,10 +29,10 @@ def similarity(x, y):
 # --- DATASET GENERATION (For Testing) ---
 if __name__ == "__main__":
     # Normal data (tight cluster around [1,1])
-    normal_data = np.random.normal(loc=1, scale=0.2, size=(50, 2))
+    normal_data = np.random.normal(loc=[1, 1], scale=0.2, size=(50, 2))
 
-    # Anomalies (opposite direction)
-    anomalies = np.random.normal(loc=-1, scale=0.2, size=(10, 2))
+    # Anomalies (orthogonal direction)
+    anomalies = np.random.normal(loc=[1, -1], scale=0.2, size=(10, 2))
 
     # Pick two normal points
     p1 = normal_data[0]
